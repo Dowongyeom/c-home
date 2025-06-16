@@ -1,0 +1,12 @@
+#define MAX_NAME 30
+#define MAX_FEEDBACK 51
+#define MAX_MIDI 12
+
+typedef struct {
+    char name[MAX_NAME];
+    int vocalRange;          // MIDI 값: 0 ~ 127
+    int midiValues[MAX_MIDI]; // 무작위 MIDI 값 배열
+    int midiCount;           // MIDI 값 개수 (5~12)
+    float stabilityScore;    // 음성 안정성
+    char feedback[MAX_FEEDBACK];
+} VocalEvaluation;
